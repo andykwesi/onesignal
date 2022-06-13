@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_this, prefer_final_fields, deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -378,14 +380,17 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unnecessary_new
     return new MaterialApp(
+      // ignore: unnecessary_new
       home: new Scaffold(
+          // ignore: unnecessary_new
           appBar: new AppBar(
             title: const Text('OneSignal Flutter Demo'),
-            backgroundColor: Color.fromARGB(255, 212, 86, 83),
+            backgroundColor: const Color.fromARGB(255, 212, 86, 83),
           ),
           body: Container(
-            padding: EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             child: SingleChildScrollView(
               child: new Table(
                 children: [
@@ -408,7 +413,7 @@ class _MyAppState extends State<MyApp> {
                   new TableRow(children: [
                     new TextField(
                       textAlign: TextAlign.center,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           hintText: "Email Address",
                           labelStyle: TextStyle(
                             color: Color.fromARGB(255, 212, 86, 83),
@@ -436,10 +441,10 @@ class _MyAppState extends State<MyApp> {
                   new TableRow(children: [
                     new TextField(
                       textAlign: TextAlign.center,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           hintText: "SMS Number",
-                          labelStyle: TextStyle(
-                            color: Color.fromARGB(255, 212, 86, 83),
+                          labelStyle: const TextStyle(
+                            color: const Color.fromARGB(255, 212, 86, 83),
                           )),
                       onChanged: (text) {
                         this.setState(() {
@@ -484,7 +489,7 @@ class _MyAppState extends State<MyApp> {
                   new TableRow(children: [
                     new TextField(
                       textAlign: TextAlign.center,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           hintText: "External User ID",
                           labelStyle: TextStyle(
                             color: Color.fromARGB(255, 212, 86, 83),
@@ -539,15 +544,17 @@ class OneSignalButtonState extends State<OneSignalButton> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    // ignore: unnecessary_new
     return new Table(
       children: [
+        // ignore: unnecessary_new
         new TableRow(children: [
           new FlatButton(
-            disabledColor: Color.fromARGB(180, 212, 86, 83),
+            disabledColor: const Color.fromARGB(180, 212, 86, 83),
             disabledTextColor: Colors.white,
-            color: Color.fromARGB(255, 212, 86, 83),
+            color: const Color.fromARGB(255, 212, 86, 83),
             textColor: Colors.white,
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: new Text(widget.title),
             onPressed: widget.enabled ? widget.onPressed : null,
           )
